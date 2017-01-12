@@ -45,7 +45,7 @@
     <div class="row">
         <div class="col-lg-12">
             <h1 class="page-header">
-                This is Mashweb.club, the home of end-user-programmed web apps
+                This is Mashweb.Club&mdash;home to end-user-programmed web apps.
             </h1>
         </div>
         <div class="col-md-4">
@@ -54,7 +54,7 @@
                     <h4>Together let's make powerful websites more personal and easier</h4>
                 </div>
                 <div class="panel-body">
-                    <p>Mashweb.club is a place for sharing and experimenting with code that will make it possible for end users to evolve personalized, powerful websites online. Before long, Mashweb.club will also be a place where end users can create such websites. We have shared some code here already and plan to share more and more.</p>
+                    <p>Mashweb.Club is a place for sharing and experimenting with code that will make it possible for end users to evolve personalized, powerful websites online. Before long, Mashweb.Club will also be a place where end users can create such websites. We have shared some code here already and plan to share more and more.</p>
                     <a href="#" class="btn btn-default">See the Lab</a>
                     <a href="#" class="btn btn-default">Read the White Paper</a>
                 </div>
@@ -66,8 +66,8 @@
                     <h4>Big Idea #1</h4>
                 </div>
                 <div class="panel-body">
-                    <p>Our first big idea is to build and use an interface for a web page that makes it fluid while it is under edit. This interface, mostly comprising JavaScript, allows the user to drag and drop HTML elements to new locations in their NodeLists or to locations in other NodeLists. Before long, it will allow the user to set attributes of HTML elements and to edit a stylesheet that is loaded by the web browser.</p>
-                    <a href="#" class="btn btn-default">Learn More</a>
+                    <p>Our first big idea is to make the structure (not just the text and images) of a web page fluid while it is under edit. The user will drag and drop HTML elements to new locations in their NodeLists or to locations in other NodeLists. Eventually, the user will be able to add new elements and widgets, to set attributes of HTML elements, to edit live stylesheets, and to persist all the changes.</p>
+                    <a href="#" class="btn btn-default">The Prototype</a>
                 </div>
             </div>
         </div>
@@ -77,7 +77,7 @@
                     <h4>Big Idea #2</h4>
                 </div>
                 <div class="panel-body">
-                    <p>Our second big idea is to create and use web continuations in the web browser as a foundation for simple, sequential programs that users can build. Without web continuations, a program that relies on more than one input message from the user is complicated. If you think you can't live with Big Idea #1, please check out our continuation example (coming soon).</p>
+                    <p>Our second big idea is to create and use web continuations in the web browser as a foundation for simple, sequential programs that users can build. Without web continuations, a program that relies on more than one input message from the user must be complicated. If you think web continuations are a bad idea, please check out our continuation example (coming soon).</p>
                     <a href="#" class="btn btn-default">Learn More</a>
                 </div>
             </div>
@@ -88,58 +88,110 @@
     <!-- Portfolio Section -->
     <div class="row">
         <div class="col-lg-12">
-            <h2 class="page-header">Portfolio Heading</h2>
+            <h2 class="page-header">The Mashweb Architecture</h2>
         </div>
-        <div class="col-md-4 col-sm-6">
-          <%= link_to page_path('portfolio-item') do %>
-            <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
-          <% end %>
+	<p>Here are the architectural layers being developed for Mashweb.Club's end-user-programmed web apps. Layers that have an implementation are marked with a checkmark.</p>
+        <div class="col-md-4">
+            <div class="panel panel-default">
+		<div class="panel-heading">
+                    <h4><i class="fa fa-fw fa-check"></i>Layer 1: The Creator Function</h4>
+                </div>
+		<div class="panel-body">
+		    <%= link_to page_path('layer_1') do %>
+		    <p>Layer 1<% end %>, the lowest layer, implements a generalized version of <%= link_to "Douglas Crockford s object-creator function", "http://javascript.crockford.com/prototypal.html" %>. This makes the <code>new</code> operator unnecessary, so that Layer 2 does not need to invoke eval. The use of eval introduces security risks, so it should be avoided. Layer 1 is relatively simple and complete.</p>
+		</div>
+	    </div>
         </div>
-        <div class="col-md-4 col-sm-6">
-          <%= link_to page_path('portfolio-item') do %>
-            <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
-          <% end %>
+        <div class="col-md-4">
+	    <div class="panel panel-default">
+		<div class="panel-heading">
+                    <h4><i class="fa fa-fw fa-check"></i>Layer 2: The Structure Creator</h4>
+                </div>
+		<div class="panel-body">
+		    <%= link_to page_path('layer_2') do %>
+		    <p>Layer 2<% end %>, the next-to-lowest layer, implements a <%= link_to 'recursive', 'http://en.wikipedia.org/wiki/Recursion_(computer_science)#Recursive_procedures_.28generative_recursion.29' %> object-creator function to construct nested objects to match literal, declarative-style descriptions. The declarative style of programming enables automated manipulation and persistence. Layer 2 exists but needs to be re-examined for a possible rewrite or refactoring.</p>
+		</div>
+	    </div>
         </div>
-        <div class="col-md-4 col-sm-6">
-          <%= link_to page_path('portfolio-item') do %>
-            <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
-          <% end %>
+        <div class="col-md-4">
+	    <div class="panel panel-default">
+		<div class="panel-heading">
+                    <h4><i class="fa fa-fw fa-check"></i>Layer 3: Suspended Animation</h4>
+                </div>
+		<div class="panel-body">
+		    <%= link_to page_path('layer_3') do %>
+		    <p>Layer 3<% end %> is an unusual <%= link_to 'JavaScript event handler', 'http://en.wikipedia.org/wiki/Event-driven_programming#Event_handlers' %> that masks out JavaScript events (putting the web page into "suspended animation") and adds event handlers to implement an "Edit Mode". A version of Layer 3 is ready to be shared with programmers.</p>
+		    <br />
+		    <br />
+		</div>
+	    </div>
+	</div>
+        <div class="col-md-4">
+	    <div class="panel panel-default">
+		<div class="panel-heading">
+                    <h4><i class="fa fa-fw fa-check"></i>Layer 4: Web-Page Components</h4>
+                </div>
+		<div class="panel-body">
+		    <%= link_to page_path('portfolio-item') do %>
+		    <p>Layer 4<% end %> implements polymorphic web-page components, i.e. objects of different types having methods of the same name but tailored to type. For example, objects representing plain HTML elements and objects representing Dojo widgets have methods of the same name so both these kinds of object can be treated uniformly. This uniformity allows the visual behaviour of both types to be mixed together in the DMI of Layer 5. Eventually the set of polymorphic methods will include methods like undo, move, delete, delete recursively, and copy. A version of Layer 4 exists but will be reworked to favor the use of <%= link_to 'Web Components', 'https://en.wikipedia.org/wiki/Web_Components' %>.</p>
+		    <br />
+		</div>
+	    </div>
         </div>
-        <div class="col-md-4 col-sm-6">
-          <%= link_to page_path('portfolio-item') do %>
-            <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
-          <% end %>
+        <div class="col-md-4">
+	    <div class="panel panel-default">
+		<div class="panel-heading">
+                    <h4><i class="fa fa-fw fa-check"></i>Layer 5: Direct Manipulation</h4>
+                </div>
+		<div class="panel-body">
+		    <%= link_to page_path('portfolio-item') do %>
+		    <p>Layer 5<% end %> implements a <%= link_to 'direct manipulation interface (DMI)', 'http://en.wikipedia.org/wiki/Direct_manipulation_interface' %> that allows a user to drop components (often components with visible behaviour) into a web page; set and adjust their attributes like foreground and background colours, width, height, etc.; move them around within the hierarchy of mixed-type components (if necessary, using some kind of suitable visual representation of the hierarchy such as a tree widget or organization chart); clone them; delete them; etc. These operations use Layer 4 methods. Layer 5 is the part of the Mashweb architecture that has received the most attention recently. Very early prototypes of parts of the interface are ready to be shared with programmers.</p>
+		</div>
+	    </div>
         </div>
-        <div class="col-md-4 col-sm-6">
-          <%= link_to page_path('portfolio-item') do %>
-            <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
-          <% end %>
+        <div class="col-md-4">
+	    <div class="panel panel-default">
+		<div class="panel-heading">
+                    <h4><i class="fa fa-fw fa-check"></i>Layer 6: Wait( ), Get( ), and Put( )</h4>
+                </div>
+		<div class="panel-body">
+		    <%= link_to page_path('portfolio-item') do %>
+		    <p>Layer 6<% end %> will implement <%= link_to 'first-class continuations', 'http://en.wikipedia.org/wiki/Continuation' %> and use them to build "system calls" for waiting on timer events and for getting or sending I/O asynchronously to or from the user or the <%= link_to 'stateless web (HTTP)', 'http://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#HTTP_session_state' %> protocol. This should allow web applications to be programmed as straightforwardly as native desktop applications, using sequential programs rather than the complex state machines that usually direct the action in web applications. Mashweb.Club is ready to share a prototype of continuations that can sequence discrete user inputs.</p>
+		    <br />
+		    <br />
+		</div>
+	    </div>
         </div>
-        <div class="col-md-4 col-sm-6">
-          <%= link_to page_path('portfolio-item') do %>
-            <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
-          <% end %>
-        </div>
+        <div class="col-md-4">
+	    <div class="panel panel-default">
+		<div class="panel-heading">
+                    <h4></i>Layer 7: Visual Programming</h4>
+                </div>
+		<div class="panel-body">
+		    <%= link_to page_path('portfolio-item') do %>
+		    <p>Layer 7<% end %> implements <%= link_to 'visual programming', 'http://en.wikipedia.org/wiki/Integrated_development_environment#Visual_programming' %>, based upon an underlying, invisible dialect of the Lisp language running on top of JavaScript. (Using Lisp underneath the visual layer enables easy, programmatic manipulation by Mashweb.) The hierarchy of program blocks will be represented by boxes within boxes within boxes … .</p>
+		</div>
+	    </div>
+	</div>
     </div>
     <!-- /.row -->
 
     <!-- Features Section -->
     <div class="row">
         <div class="col-lg-12">
-            <h2 class="page-header">Modern Business Features</h2>
+            <h2 class="page-header">Proposed Features of the Mashweb.Club Website</h2>
         </div>
         <div class="col-md-6">
-            <p>The Modern Business template by Start Bootstrap includes:</p>
+            <p>The plan for Mashweb.Club 1.0 includes:</p>
             <ul>
-                <li><strong>Bootstrap v3.2.0</strong>
-                </li>
-                <li>jQuery v1.11.0</li>
-                <li>Font Awesome v4.1.0</li>
-                <li>Working PHP contact form with validation</li>
-                <li>Unstyled page elements for easy customization</li>
-                <li>17 HTML pages</li>
+                <li>Allow visitors to create and edit web pages <em>without coding</em></li>
+		<li>Allow visitors to create and edit single-page web apps using simple visual programming patterned after successful visual programming environments for children</li>
+		<li>Allow subscribers to save web pages and single-page web apps to their own subdomains under Mashweb.Club, e.g. John.Mashweb.Club.</li>
+                <li>All the abilities of browser-based rich-text editors</li>
+		<li>The ability to drag and drop images and web links to Mashweb.Club-created web pages</li>
+                <li>The ability to include some web components</li>
+		<li>Lazy-loaded widget contents, e.g. lazy-loaded tabs</li>
             </ul>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, omnis doloremque non cum id reprehenderit, quisquam totam aspernatur tempora minima unde aliquid ea culpa sunt. Reiciendis quia dolorum ducimus unde.</p>
         </div>
         <div class="col-md-6">
             <img class="img-responsive" src="http://placehold.it/700x450" alt="">
@@ -153,10 +205,10 @@
     <div class="well">
         <div class="row">
             <div class="col-md-8">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, expedita, saepe, vero rerum deleniti beatae veniam harum neque nemo praesentium cum alias asperiores commodi.</p>
+                <p>We are sharing a detailed white paper on the background of the Mashweb architecture and the code we have written to implement parts of the architecture. If you would like to be informed of more developments of the Mashweb architecture and the Mashweb.Club website, please put yourself on our mailing list. For the next few months announcements will not occur more than once a week. We will not share your email address with anyone. Signing up will also give you your own area of Mashweb.Club when that facility is ready.</p>
             </div>
             <div class="col-md-4">
-                <a class="btn btn-lg btn-default btn-block" href="#">Call to Action</a>
+                <a class="btn btn-lg btn-default btn-block" href="/users/sign_up">Sign Up</a>
             </div>
         </div>
     </div>
