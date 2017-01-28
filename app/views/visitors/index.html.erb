@@ -1,5 +1,5 @@
 <!-- Header Carousel -->
-<header id="myCarousel" class="carousel slide">
+<header id="myCarousel" class="carousel slide" style="height:25%;">
     <!-- Indicators -->
     <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -52,57 +52,66 @@
     <!-- Marketing Icons Section -->
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="panel-header">
-                This is Mashweb.Club&mdash;home of end-user-programmed web apps.
-            </h1>
-            <h4>Together let's make powerful websites more personal and easier.</h4>
-	    <div class="panel-heading">
-		<p>Mashweb.Club is a place for everyday users of the Web to mix, mingle, and collaborate with Web designers and Web developers to birth a new kind of Web where any Web user can easily create powerful web apps. Here everyday users can share their experiences, ideas, and preferences about their Web experiences and try out new styles of interacting with the Web. Web developers can test and get feedback on their experimenting with code&mdash;code to make it possible for end users to evolve personalized, powerful websites online. Before long, Mashweb.Club will also be a place where end users can create such websites. We have shared some code here already and plan to share more and more.</p>
-	    </div>
+            <h3>Mashweb.Club&mdash;Home of end-user-programmed web apps</h3>
         </div>
     </div>
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-sm-4">
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <h4>Big Idea #1</h4>
                 </div>
                 <div class="panel-body">
-                    <p>Our first big idea is to make the structure (not just the text and images) of a web page fluid while it is under edit. The user will drag and drop HTML elements to new locations in their NodeLists or to locations in other NodeLists. Eventually, the user will be able to add new elements and widgets, to set attributes of HTML elements, to edit live stylesheets, and to persist all the changes.</p>
-                    <a href="/not_added_yet.html" class="btn btn-primary">Learn & Try</a>
+		    <p>Let's add HTML elements and widgets to a web page, rearrange them, stretch them, recolor them, and set their other attributes just <strong><em>by pointing, clicking, and dragging.</em></strong> Let's make <em>direct manipulation</em> work.</p>
+                    <center><a href="/not_added_yet.html" class="btn btn-success">Drag Some HTML Elements</a></center>
                 </div>
             </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-sm-4">
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <h4>Big Idea #2</h4>
                 </div>
                 <div class="panel-body">
-                    <p>Our second big idea is to create and use web continuations in the web browser as a foundation for simple, sequential programs that users can build. Without web continuations, a program that relies on more than one input message from the user must be complicated. If you think web continuations are a bad idea, please check out our continuation example (coming soon).</p>
-                    <a href="/not_added_yet.html" class="btn btn-primary">Learn & Try</a>
+		    <p>Let's use <strong><em>web continuations</em></strong> as a foundation for simple, sequential programs that users can build. Without web continuations, a program that relies on more than one input message from the user will be complicated.</p>
+                    <center><a href="/not_added_yet.html" class="btn btn-success">Try Continuations</a></center>
                 </div>
             </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-sm-4">
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <h4>Big Idea #3</h4>
                 </div>
                 <div class="panel-body">
-                    <p>Our third big idea is to represent the user's program blocks or, more technically, <em>nodes in the abstract syntax tree (AST)</em> with HTML elements that the user can add, rearrange, and delete. To edit the program, the user will use the same user interface as the HTML elements in the web page under edit. The AST of the user program will be relatively easy to rearrange because it will coded in a dialect of Lisp. To the user the hierarchy of program nodes will be represented by boxes within boxes within boxes … .</p>
-                    <a href="/not_added_yet.html" class="btn btn-primary">Learn & See</a>
+		    <p>Let's <strong><em>represent program blocks (AST nodes) with HTML elements</em></strong> the user can add, rearrange, and delete by direct manipulation. The user interface of the HTML-element editor can be adapted for the purpose.</p>
+                    <center><a href="/not_added_yet.html" class="btn btn-success">See Our Inspirations</a></center>
                 </div>
             </div>
         </div>
     </div>
+    <!-- /.row -->
+    <div class="row">
+        <div class="col-lg-12">
+            <h4><strong><em>Together</em></strong> let's make powerful websites more personal and easier.</h4>
+	    <p>If you are a user who wants to build a website or a <em>web app</em> but find the technical
+		aspects daunting and unfriendly, please try our <a href="/demos">demos</a> of web pages that are
+		easily manipulated <em>without programming</em>;
+		or <a href="/users/sign_up">join Mashweb.Club</a>
+		to get news about the interfaces we are creating on this website to enable non-techies
+		to build powerful, useful web apps;
+		or post some comments on the <a href="https://blog.mashweb.club">Mashweb.Club Blog</a>
+		to give your feedback. If you are a programmer or web designer, please consider collaborating
+		with us to develop a place on the Web where practically <em>anyone</em> can create a very unique
+		web app.
+        </div>
+    </div>
+    <!-- /.row -->
     <div class="row">
 	<div class="col-md-12">
 	    <div class="panel-heading">
 		<center>
-		    <a href="/not_added_yet" class="btn btn-primary">Get the White Paper</a>
-		    <a href="/not_added_yet" class="btn btn-primary">See or Get the Code</a>
-		    <a href="/users/sign_up" class="btn btn-primary">Join Mashweb.club</a>
+		    <a href="/users/sign_up" class="btn btn-lg btn-warning">Use or Help Develop<br />Mashweb Technology</a>
 		</center>
 	    </div>
 	</div>
@@ -129,7 +138,8 @@
 		<div class="panel-body">
 		    <%= link_to page_path('layer_1') do %>
 		    <p>Layer 1<% end %>, the lowest layer, implements a generalized version of <%= link_to "Douglas Crockford s object-creator function", "http://javascript.crockford.com/prototypal.html" %>. This makes the <code>new</code> operator unnecessary, so that Layer 2 does not need to invoke <code>eval</code>. The use of <code>eval</code> introduces security risks, so it should be avoided. Layer 1 is relatively simple and complete.</p>
-		    <a class="btn btn-primary" href="/users/sign_up">See the Code</a>
+		    <center><a class="btn btn-primary" href="/users/sign_up">See the Code</a></center>
+		    <br />
 		</div>
 	    </div>
         </div>
@@ -141,7 +151,7 @@
 		<div class="panel-body">
 		    <%= link_to page_path('layer_2') do %>
 		    <p>Layer 2<% end %>, the next-to-lowest layer, implements a <%= link_to 'recursive', 'http://en.wikipedia.org/wiki/Recursion_(computer_science)#Recursive_procedures_.28generative_recursion.29' %> object-creator function to construct nested objects to match literal, declarative-style descriptions. The declarative style of programming enables automated manipulation and persistence. Layer 2 exists but needs to be re-examined for a possible rewrite or refactoring.</p>
-		    <a class="btn btn-primary" href="/users/sign_up">See the Code</a>
+		    <center><a class="btn btn-primary" href="/users/sign_up">See the Code</a></center>
 		</div>
 	    </div>
         </div>
@@ -153,8 +163,7 @@
 		<div class="panel-body">
 		    <%= link_to page_path('layer_3') do %>
 		    <p>Layer 3<% end %> is an unusual <%= link_to 'JavaScript event handler', 'http://en.wikipedia.org/wiki/Event-driven_programming#Event_handlers' %> that masks out JavaScript events (putting the web page into "suspended animation") and adds event handlers to implement an "Edit Mode". A version of Layer 3 is ready to be shared with programmers.</p>
-		    <a class="btn btn-primary" href="/users/sign_up">See the Code</a>
-		    <br />
+		    <center><a class="btn btn-primary" href="/users/sign_up">See the Code</a></center>
 		    <br />
 		    <br />
 		</div>
@@ -168,8 +177,7 @@
 		<div class="panel-body">
 		    <%= link_to page_path('portfolio-item') do %>
 		    <p>Layer 4<% end %> implements polymorphic web-page components, i.e. objects of different types having methods of the same name but tailored to type. For example, objects representing plain HTML elements and objects representing Dojo widgets have methods of the same name so both these kinds of object can be treated uniformly. This uniformity allows the visual behaviour of both types to be mixed together in the DMI of Layer 5. Eventually the set of polymorphic methods will include methods like undo, move, delete, delete recursively, and copy. A version of Layer 4 exists but will be reworked to favor the use of <%= link_to 'Web Components', 'https://en.wikipedia.org/wiki/Web_Components' %>.</p>
-		    <a class="btn btn-primary" href="/users/sign_up">See the Code</a>
-		    <br />
+		    <center><a class="btn btn-primary" href="/users/sign_up">See the Code</a></center>
 		    <br />
 		</div>
 	    </div>
@@ -182,7 +190,7 @@
 		<div class="panel-body">
 		    <%= link_to page_path('portfolio-item') do %>
 		    <p>Layer 5<% end %> implements a <%= link_to 'direct manipulation interface (DMI)', 'http://en.wikipedia.org/wiki/Direct_manipulation_interface' %> that allows a user to drop components (often components with visible behaviour) into a web page; set and adjust their attributes like foreground and background colours, width, height, etc.; move them around within the hierarchy of mixed-type components (if necessary, using some kind of suitable visual representation of the hierarchy such as a tree widget or organization chart); clone them; delete them; etc. These operations use Layer 4 methods. Layer 5 is the part of the Mashweb architecture that has received the most attention recently. Very early prototypes of parts of the interface are ready to be shared with programmers.</p>
-		    <a class="btn btn-primary" href="/users/sign_up">See the Code</a>
+		    <center><a class="btn btn-primary" href="/users/sign_up">See the Code</a></center>
 		</div>
 	    </div>
         </div>
@@ -194,8 +202,7 @@
 		<div class="panel-body">
 		    <%= link_to page_path('portfolio-item') do %>
 		    <p>Layer 6<% end %> will implement <%= link_to 'first-class continuations', 'http://en.wikipedia.org/wiki/Continuation' %> and use them to build "system calls" for waiting on timer events and for getting or sending I/O asynchronously to or from the user or the <%= link_to 'stateless web (HTTP)', 'http://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#HTTP_session_state' %> protocol. This should allow web applications to be programmed as straightforwardly as native desktop applications, using sequential programs rather than the complex state machines that usually direct the action in web applications. Mashweb.Club is ready to share a prototype of continuations that can sequence discrete user inputs.</p>
-		    <a class="btn btn-primary" href="/users/sign_up">See the Code</a>
-		    <br />
+		    <center><a class="btn btn-primary" href="/users/sign_up">See the Code</a></center>
 		    <br />
 		    <br />
 		</div>
