@@ -68,20 +68,23 @@ Rails.application.configure do
   # Send deprecation notices to registered listeners.
   config.active_support.deprecation = :notify
 
-  config.action_mailer.smtp_settings = {
-    address: "smtp.gmail.com",
-    port: 587,
-    domain: Rails.application.secrets.domain_name,
-    authentication: "plain",
-    enable_starttls_auto: true,
-    user_name: Rails.application.secrets.email_provider_username,
-    password: Rails.application.secrets.email_provider_password
-  }
+
+config.action_mailer.smtp_settings = {
+  port: 587,
+  address: ENV['MAIL_ADDRESS'],
+  user_name: ENV['MAIL_USERNAME'],
+  password: ENV['MAIL_PASSWORD'],
+  domain: "mashwebclub.herokuapp.com",
+  authentication: "plain",
+  enable_starttls_auto: true
+}
+
   # ActionMailer Config
-  config.action_mailer.default_url_options = { :host => Rails.application.secrets.domain_name }
+  config.action_mailer.default_url_options[:host] = "mashwebclub.herokuapp.com"
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.default_charset = "utf-8"
 
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
